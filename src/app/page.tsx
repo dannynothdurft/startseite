@@ -58,10 +58,9 @@ const handleSearch = (e: React.FormEvent) => {
   };
 
   const footerLinks = [
-    { name: 'Impressum', url: '#impressum' },
-    { name: 'Datenschutz', url: '#datenschutz' },
-    { name: 'Hilfe', url: '#hilfe' },
-    { name: 'Kontakt', url: '#kontakt' },
+    { name: 'Impressum', url: '/impressum' },
+    { name: 'Datenschutz', url: '/datenschutz' },
+    { name: 'Kontakt', url: '/kontakt' },
   ];
 
   return (
