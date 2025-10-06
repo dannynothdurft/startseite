@@ -111,8 +111,8 @@ const handleSearch = (e: React.FormEvent) => {
     <h3 className="font-semibold text-gray-800 mb-2">Google Chrome</h3>
     <ol className="list-decimal list-inside space-y-1 text-sm">
       <li>Klicken Sie auf die drei Punkte (⋮) oben rechts</li>
-      <li>Wählen Sie "Einstellungen"</li>
-      <li>Unter "Darstellung" finden Sie "Startseite anzeigen"</li>
+      <li>Wählen Sie &quot;Einstellungen&quot;</li>
+      <li>Unter &quot;Darstellung&quot; finden Sie &quot;Startseite anzeigen&quot;</li>
       <li>Aktivieren Sie die Option und geben Sie die URL ein</li>
     </ol>
   </div>
@@ -121,9 +121,9 @@ const handleSearch = (e: React.FormEvent) => {
     <h3 className="font-semibold text-gray-800 mb-2">Mozilla Firefox</h3>
     <ol className="list-decimal list-inside space-y-1 text-sm">
       <li>Klicken Sie auf die drei Linien (≡) oben rechts</li>
-      <li>Wählen Sie "Einstellungen"</li>
-      <li>Unter "Startseite" finden Sie die Optionen</li>
-      <li>Wählen Sie "Benutzerdefinierte Adressen" und fügen Sie die URL ein</li>
+      <li>Wählen Sie &quot;Einstellungen&quot;</li>
+      <li>Unter &quot;Startseite&quot; finden Sie die Optionen</li>
+      <li>Wählen Sie &quot;Benutzerdefinierte Adressen&quot; und fügen Sie die URL ein</li>
     </ol>
   </div>
 
@@ -131,9 +131,9 @@ const handleSearch = (e: React.FormEvent) => {
     <h3 className="font-semibold text-gray-800 mb-2">Microsoft Edge</h3>
     <ol className="list-decimal list-inside space-y-1 text-sm">
       <li>Klicken Sie auf die drei Punkte (⋯) oben rechts</li>
-      <li>Wählen Sie "Einstellungen"</li>
-      <li>Unter "Beim Start" wählen Sie "Diese Seiten öffnen"</li>
-      <li>Klicken Sie auf "Neue Seite hinzufügen" und geben Sie die URL ein</li>
+      <li>Wählen Sie &quot;Einstellungen&quot;</li>
+      <li>Unter &quot;Beim Start&quot; wählen Sie &quot;Diese Seiten öffnen&quot;</li>
+      <li>Klicken Sie auf &quot;Neue Seite hinzufügen&quot; und geben Sie die URL ein</li>
     </ol>
   </div>
 
@@ -141,9 +141,9 @@ const handleSearch = (e: React.FormEvent) => {
     <h3 className="font-semibold text-gray-800 mb-2">Safari (Mac)</h3>
     <ol className="list-decimal list-inside space-y-1 text-sm">
       <li>Öffnen Sie Safari → Einstellungen</li>
-      <li>Wählen Sie den Tab "Allgemein"</li>
-      <li>Unter "Neue Fenster öffnen mit" und "Neue Tabs öffnen mit"</li>
-      <li>Wählen Sie "Homepage" und geben Sie die URL ein</li>
+      <li>Wählen Sie den Tab &quot;Allgemein&quot;</li>
+      <li>Unter &quot;Neue Fenster öffnen mit&quot; und &quot;Neue Tabs öffnen mit&quot;</li>
+      <li>Wählen Sie &quot;Homepage&quot; und geben Sie die URL ein</li>
     </ol>
   </div>
 </div>
