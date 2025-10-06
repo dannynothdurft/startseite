@@ -4,6 +4,7 @@ export default function MainLayout({
   children: React.ReactNode
 }>) {
   const footerLinks = [
+    { name: 'Startseite', url: '/' },
     { name: 'Impressum', url: '/impressum' },
     { name: 'Datenschutz', url: '/datenschutz' },
     { name: 'Kontakt', url: '/kontakt' },
