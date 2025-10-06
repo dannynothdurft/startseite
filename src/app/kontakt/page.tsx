@@ -1,6 +1,6 @@
-import ContactForm from "@/components/contact-form"
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, MapPin, Phone } from "lucide-react"
+import ContactForm from '@/components/contact-form'
+import { Card, CardContent } from '@/components/ui/card'
+import { Mail, MapPin, Phone } from 'lucide-react'
 
 export default function ContactPage() {
   return (
@@ -9,7 +9,9 @@ export default function ContactPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">Kontakt</span>
+            <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+              Kontakt
+            </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Hast du ein Projekt im Kopf? Lass uns darüber sprechen!

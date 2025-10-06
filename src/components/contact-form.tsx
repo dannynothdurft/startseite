@@ -1,22 +1,34 @@
-"use client"
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Loader2, CheckCircle2 } from "lucide-react"
+'use client'
+import type React from 'react'
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Loader2, CheckCircle2 } from 'lucide-react'
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    type: "",
-    message: "",
+    name: '',
+    email: '',
+    type: '',
+    message: '',
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -24,20 +36,20 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       })
 
       if (response.ok) {
         setIsSuccess(true)
-        setFormData({ name: "", email: "", type: "", message: "" })
+        setFormData({ name: '', email: '', type: '', message: '' })
       }
     } catch (error) {
-      console.error("Error submitting form:", error)
+      console.error('Error submitting form:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -50,7 +62,8 @@ export default function ContactForm() {
           <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Nachricht gesendet!</h3>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            Vielen Dank für deine Nachricht. Ich melde mich so schnell wie möglich bei dir.
+            Vielen Dank für deine Nachricht. Ich melde mich so schnell wie
+            möglich bei dir.
           </p>
           <Button onClick={() => setIsSuccess(false)} variant="outline">
             Weitere Nachricht senden
@@ -64,7 +77,9 @@ export default function ContactForm() {
     <Card className="border-primary/20">
       <CardHeader>
         <CardTitle>Kontaktformular</CardTitle>
-        <CardDescription>Fülle das Formular aus und ich melde mich schnellstmöglich bei dir.</CardDescription>
+        <CardDescription>
+          Fülle das Formular aus und ich melde mich schnellstmöglich bei dir.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -73,7 +88,9 @@ export default function ContactForm() {
             <Input
               id="name"
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               required
               placeholder="Dein Name"
             />
@@ -85,7 +102,9 @@ export default function ContactForm() {
               id="email"
               type="email"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               required
               placeholder="deine@email.de"
             />
@@ -93,7 +112,12 @@ export default function ContactForm() {
 
           <div className="space-y-2">
             <Label htmlFor="type">Art der Anfrage</Label>
-            <Select value={formData.type} onValueChange={(value) => setFormData({ ...formData, type: value })}>
+            <Select
+              value={formData.type}
+              onValueChange={(value) =>
+                setFormData({ ...formData, type: value })
+              }
+            >
               <SelectTrigger id="type">
                 <SelectValue placeholder="Bitte auswählen" />
               </SelectTrigger>
@@ -111,21 +135,27 @@ export default function ContactForm() {
             <Textarea
               id="message"
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
               required
               placeholder="Deine Nachricht..."
               rows={6}
             />
           </div>
 
-          <Button type="submit" className="w-full hover-glow-purple" disabled={isSubmitting}>
+          <Button
+            type="submit"
+            className="w-full hover-glow-purple"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Wird gesendet...
               </>
             ) : (
-              "Nachricht senden"
+              'Nachricht senden'
             )}
           </Button>
         </form>
