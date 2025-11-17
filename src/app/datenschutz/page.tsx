@@ -40,9 +40,7 @@ export default function DatenschutzPage() {
                 <br />
                 DevDanny
                 <br />
-                Tribünenweg 32
-                <br />
-                22111 Hamburg
+                Hamburg
                 <br />
                 Deutschland
                 <br />

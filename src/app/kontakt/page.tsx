@@ -68,9 +68,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Adresse</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Tribünenweg 32
-                      <br />
-                      22111 Hamburg
+                      Hamburg
                       <br />
                       Deutschland
                     </p>
