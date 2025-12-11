@@ -17,6 +17,15 @@ const HomePage = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
   const [showHomepageInfo, setShowHomepageInfo] = useState(false)
 
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  useEffect(() => {
+    // Preload das Bild sofort
+    const img = new Image()
+    img.src = '/images/background.webp'
+    img.onload = () => setImageLoaded(true)
+  }, [])
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date())
@@ -100,11 +109,16 @@ const HomePage = () => {
 
   return (
     <>
+      {/* Erste Ebene: Dunkler Hintergrund als Fallback */}
+      <div className="absolute inset-0 bg-gray-900" />
+
+      {/* Zweite Ebene: Hintergrundbild mit Transition */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 ${
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{ backgroundImage: `url("/images/background.webp")` }}
       />
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
 
       <div className="absolute top-6 left-8">
         <button
