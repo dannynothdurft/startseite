@@ -109,17 +109,6 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Erste Ebene: Dunkler Hintergrund als Fallback */}
-      <div className="absolute inset-0 bg-gray-900" />
-
-      {/* Zweite Ebene: Hintergrundbild mit Transition */}
-      <div
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 ${
-          imageLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{ backgroundImage: `url("/images/background.webp")` }}
-      />
-
       <div className="absolute top-6 left-8">
         <button
           onClick={handleSetAsHomepage}
