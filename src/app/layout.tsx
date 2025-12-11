@@ -107,7 +107,6 @@ export const metadata: Metadata = {
       { url: '/icons/icon-96x96.png', sizes: '96x96', type: 'image/png' },
       { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
       { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
-      { url: '/icons/logo.svg', type: 'image/svg+xml' },
     ],
     apple: [
       {
@@ -143,7 +142,6 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
   },
 }
-
 
 export const viewport: Viewport = {
   width: 'device-width',
