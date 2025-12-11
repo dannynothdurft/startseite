@@ -22,11 +22,7 @@ export default function ImpressumPage() {
                 <br />
                 DevDanny
                 <br />
-                Tribünenweg 32
-                <br />
-                22111 Hamburg
-                <br />
-                Deutschland
+                Hamburg
               </p>
             </div>
 
@@ -68,9 +64,7 @@ export default function ImpressumPage() {
               <p className="text-muted-foreground leading-relaxed">
                 Danny Nothdurft
                 <br />
-                Tribünenweg 32
-                <br />
-                22111 Hamburg
+                Hamburg
               </p>
             </div>
 

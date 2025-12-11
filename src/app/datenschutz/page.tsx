@@ -40,11 +40,7 @@ export default function DatenschutzPage() {
                 <br />
                 DevDanny
                 <br />
-                Tribünenweg 32
-                <br />
-                22111 Hamburg
-                <br />
-                Deutschland
+                Hamburg
                 <br />
                 <br />
                 E-Mail:{' '}
@@ -124,9 +120,9 @@ export default function DatenschutzPage() {
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
                 Übertragung vertraulicher Inhalte eine SSL-bzw.
                 TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
-                daran, dass die Adresszeile des Browsers von &quot;http://&quot; auf
-                &quot;https://&quot; wechselt und an dem Schloss-Symbol in Ihrer
-                Browserzeile.
+                daran, dass die Adresszeile des Browsers von &quot;http://&quot;
+                auf &quot;https://&quot; wechselt und an dem Schloss-Symbol in
+                Ihrer Browserzeile.
               </p>
             </div>
 

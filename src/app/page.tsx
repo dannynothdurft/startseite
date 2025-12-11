@@ -9,6 +9,8 @@ import {
   Linkedin,
   Home,
 } from 'lucide-react'
+import LogoIcon from '@/lib/icons/LogoIcon'
+import Ebay from '@/lib/icons/Ebay'
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -27,20 +29,6 @@ const HomePage = () => {
     setShowHomepageInfo(true)
   }
 
-  const getSeasonalBackground = () => {
-    const month = new Date().getMonth() + 1
-
-    if (month >= 3 && month <= 5) {
-      return 'https://images.pexels.com/photos/1086188/pexels-photo-1086188.jpeg?auto=compress&cs=tinysrgb&w=1920'
-    } else if (month >= 6 && month <= 8) {
-      return 'https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&w=1920'
-    } else if (month >= 9 && month <= 11) {
-      return 'https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1920'
-    } else {
-      return 'https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=1920'
-    }
-  }
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
@@ -50,6 +38,18 @@ const HomePage = () => {
   }
 
   const shortcuts = [
+    {
+      name: 'SlabAsset',
+      icon: LogoIcon,
+      url: 'https://slabasset.de',
+      color: 'bg-[#111827]',
+    },
+    {
+      name: 'eBay',
+      icon: Ebay,
+      url: 'https://www.ebay.de/usr/slabasset',
+      color: 'bg-[#92c821]',
+    },
     {
       name: 'WhatsApp',
       icon: MessageCircle,
@@ -65,7 +65,7 @@ const HomePage = () => {
     {
       name: 'YouTube',
       icon: Youtube,
-      url: 'https://www.youtube.com',
+      url: 'https://www.youtube.com/@SlabAsset',
       color: 'bg-red-500',
     },
     {
@@ -102,7 +102,7 @@ const HomePage = () => {
     <>
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${getSeasonalBackground()})` }}
+        style={{ backgroundImage: `url("/images/background.webp")` }}
       />
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
 
